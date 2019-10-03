@@ -1,4 +1,7 @@
 {% extends "register/base.html" %}
 {% block content %}
-<p>ここに、好きな内容を入れる。</p>
+<p>在室メンバー</p>
+{% for researcher in researchers %}
+    {{ researcher.first_name }} <br>
+{% endfor %}
 {% endblock %}

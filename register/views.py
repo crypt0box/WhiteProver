@@ -25,6 +25,11 @@ User = get_user_model()
 class Top(generic.TemplateView):
     template_name = 'register/top.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["researchers"] = User.objects.filter(status='在室')
+        return context
+
 
 class Login(LoginView):
     """ログインページ"""
