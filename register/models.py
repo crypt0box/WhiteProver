@@ -48,7 +48,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     """
     email = models.EmailField(_('email address'), unique=True)
     first_name = models.CharField(_('first name'), max_length=30, blank=True)
-    last_name = models.CharField(_('last name'), max_length=150, blank=True)
     status = models.CharField(_('user status'), max_length=30, choices=[('0', '在室'), ('1', '不在')], blank=True)
     mac = models.CharField(_('mac address'), max_length=18, blank=True)
 
