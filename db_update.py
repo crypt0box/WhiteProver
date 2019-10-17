@@ -20,6 +20,8 @@ for mac_researcher in mac_list:
         proc = subprocess.check_output(cmd.split()).decode()
         if '1 received' in proc:
             researchers[mac_researcher] = '在室'
+        else:
+            researchers[mac_researcher] = '不在'
     except:
         pass
 
