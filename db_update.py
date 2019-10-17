@@ -11,8 +11,8 @@ researchers = {}
 # データ（レコード）取得
 sql = 'select first_name, mac, status  from register_user'
 for row in c.execute(sql):
-    mac_list = {row[0]: row[1]}
-    researchers = {row[0]: row[2]}
+    mac_list[row[0]] = row[1]
+    researchers[row[0]] = row[2]
 
 for mac_researcher in mac_list:
     cmd = 'sudo l2ping -c 1 '+mac_list[mac_researcher]
