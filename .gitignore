@@ -107,3 +107,7 @@ ENV/
 
 .idea/
 db.sqlite3
+
+requirements.txt
+Procfile
+
